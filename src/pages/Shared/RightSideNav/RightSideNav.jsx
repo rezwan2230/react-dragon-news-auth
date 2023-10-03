@@ -2,6 +2,10 @@ import { FcGoogle } from "react-icons/fc";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
+import qZinePic1 from '../../../assets/qZone1.png'
+import qZinePic2 from '../../../assets/qZone2.png'
+import qZinePic3 from '../../../assets/qZone3.png'
+import advertisingPic from '../../../assets/bg.png'
 
 const RightSideNav = () => {
     return (
@@ -20,7 +24,7 @@ const RightSideNav = () => {
             </div>
 
             {/* Find Us On */}
-            <div className=" md:px-1 lg:px-3 space-y-3 mb-6">
+            <div className=" md:px-1 lg:px-3 space-y-3 mb-8">
                 <h2 className="text-2xl">Find Us On</h2>
 
                 <div className="border rounded-md border-black divide-y divide-slate-400">
@@ -40,9 +44,18 @@ const RightSideNav = () => {
             </div>
 
             {/* Q Zone */}
-            <div className="bg-[#F3F3F3]">
-                <p>dfg</p>
+            <div className="bg-[#F3F3F3] p-4">
+                <div className="space-y-5">
+                <h2 className="text-xl font-semibold">Q-Zone </h2>
+                    <img src={qZinePic1} alt="" />
+                    <img src={qZinePic2} alt="" />
+                    <img src={qZinePic3} alt="" />
+                </div>
+            </div>
 
+            {/* Advertising */}
+            <div>
+                <img src={advertisingPic} alt="" />
             </div>
 
         </div>

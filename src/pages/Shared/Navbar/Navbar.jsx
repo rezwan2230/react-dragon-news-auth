@@ -1,12 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
-import user from '../../../assets/user.png'
+import users from '../../../assets/user.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
     const navLink = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/about'>About</NavLink></li>
-        <li><NavLink to='/career'>Career</NavLink></li>
+        <li><NavLink className='font-semibold text-lg' to='/'>Home</NavLink></li>
+        <li><NavLink className='font-semibold text-lg' to='/about'>About</NavLink></li>
+        <li><NavLink className='font-semibold text-lg' to='/career'>Career</NavLink></li>
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => { console.log(result); })
+            .catch(error => { console.error(error); })
+    }
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -28,10 +38,14 @@ const Navbar = () => {
             <div className="navbar-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src={user} />
+                        <img src={users} />
                     </div>
-                </label>    
-                <Link><button className="btn btn-sm">Logon</button></Link>
+                </label>
+                {
+                    user ? <button onClick={handleLogOut} className="btn btn-sm">Logout</button> : <Link to='/login'><button className="btn btn-sm">Login</button></Link>
+                }
+
+
             </div>
         </div>
     );
