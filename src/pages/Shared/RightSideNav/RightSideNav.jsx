@@ -12,7 +12,7 @@ const RightSideNav = () => {
         <div>
             {/* Login With */}
             <div className=" md:px-1 lg:px-3 space-y-3 mb-6">
-                <h2 className="text-2xl">Login With</h2>
+                <h2 className="text-2xl text-[#403F3F] font-semibold pb-2">Login With</h2>
                 <button className="btn w-full btn-outline flex">
                     <FcGoogle className="text-2xl"></FcGoogle>
                     Login with Google
@@ -44,18 +44,18 @@ const RightSideNav = () => {
             </div>
 
             {/* Q Zone */}
-            <div className="bg-[#F3F3F3] p-4">
+            <div className="bg-[#F3F3F3] p-4 lg:mx-3 rounded">
                 <div className="space-y-5">
                 <h2 className="text-xl font-semibold">Q-Zone </h2>
-                    <img src={qZinePic1} alt="" />
-                    <img src={qZinePic2} alt="" />
-                    <img src={qZinePic3} alt="" />
+                    <img className="mx-auto" src={qZinePic1} alt="" />
+                    <img className="mx-auto" src={qZinePic2} alt="" />
+                    <img className="mx-auto" src={qZinePic3} alt="" />
                 </div>
             </div>
 
             {/* Advertising */}
-            <div>
-                <img src={advertisingPic} alt="" />
+            <div className="lg:mx-3 mt-6">
+                <img className="w-full" src={advertisingPic} alt="" />
             </div>
 
         </div>

@@ -11,7 +11,7 @@ const LeftSideNav = () => {
     }, [])
 
     return (
-        <div>
+        <div className="">
             <h2 className="text-2xl text-[#403F3F] font-semibold">All Category</h2>
             <div className=" bg-[#E7E7E7] text-center text-xl text-[#403F3F] font-semibold mt-5 py-5 rounded-md">
                 <h2>National News</h2>
